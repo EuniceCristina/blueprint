@@ -1,0 +1,6 @@
+all = [
+    
+    'users',
+    'esportes',
+    'auth'
+]

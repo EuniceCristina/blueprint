@@ -1,0 +1,29 @@
+'<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <div class="nav"><h1>Registro de Esportes</h1></div>
+    <div>
+        <div class='main'>
+            
+        <form action="{{url_for('esportes.register')}}" method="post">
+            <h2>Dados</h2>
+            <input type="text" name="nome" placeholder="nome" >
+            <select name="user" id="user">
+                {%for usr in user %}
+                <option value="{{usr.id}}">{{usr.nome}}</option>
+                {% endfor %}
+            </select>
+    
+            
+            <button>Enviar</button>
+        </form>
+    </div>
+    
+    </div>
+</body>
+</html>
