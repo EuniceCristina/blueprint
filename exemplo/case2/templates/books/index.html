@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    
+    <style>
+        h1{
+            color: wheat;
+            
+        }
+       
+        .nav{
+            background-color: brown;
+            display: flex;
+            justify-content: center;
+            padding: 10px;
+        }
+        .main{
+            
+            display: flex;
+            flex-direction: column;
+            align-items: right;
+            
+            width: 100%;
+            
+        }
+        .main a{
+            width: 10%;
+        }
+        button{
+            width: 10%;
+            height: 40px;
+            margin-top: 15px;
+            margin-left:85%;
+            border-radius: 10px;
+            border: 4px solid brown;
+            background-color: wheat;
+            
+        }
+        button:hover{
+            background-color:brown;
+            color:white;
+        }
+        .main ul{
+            width:30%;
+            color:white;
+        }
+        .main p{
+            color:brown;
+            padding:10px;
+            height:30px;
+            border:0.5px solid;
+            width:100%;
+            background-color:wheat;
+        }
+    </style>
+</head>
+<body>
+
+    <div class="nav"><h1>Lista de Livros</h1></div>
+
+
+    <a href="{{url_for('books.register')}}"><button>Adicionar</button></a>
+    <div class='main'>
+    <hr>
+    <ul>
+    {% for book in books %}
+    <li><p>{{book.titulo}}</p></li>
+    {% endfor %}
+    </ul>
+    </div>
+    
+    
+</body>
+</html>

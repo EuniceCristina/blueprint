@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h1>Página do auth</h1>
+
+    <div class="nav"><h1>Registro de Usuários</h1></div>
+    <div>
+        <div class='main'>
+            
+        <form action="{{url_for('auth.login')}}" method="post">
+            <h2>Dados</h2>
+            <input type="text" name="nome" placeholder="Nome">
+            <input type="text" name="email"  placeholder="Email">
+            
+            <button>Enviar</button>
+        </form>
+</body>
+</html>

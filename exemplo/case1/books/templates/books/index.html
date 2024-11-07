@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="{{ url_for('books.static', filename='style.css') }}">
+    
+    <style>
+        
+    </style>
+</head>
+<body>
+    
+
+    <div class="nav"><h1>Lista de Livros</h1></div>
+
+
+    <a href="url_for('auth.logout')">Sair</a>
+    <div class='main'>
+    <hr>
+    <ul>
+    {% for book in books %}
+    <li><p>{{book.titulo}}</p></li>
+    {% endfor %}
+    </ul>
+    </div>
+    <a href="{{url_for('books.register')}}"><button>Adicionar</button></a>
+
+
+
+    
+    
+    
+</body>
+</html>

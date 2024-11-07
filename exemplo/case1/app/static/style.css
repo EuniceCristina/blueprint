@@ -1,0 +1,34 @@
+h1{
+    color: wheat;
+    display: flex;
+    justify-content: center;
+    padding: 20px;
+}
+body{
+    
+    margin: 0;
+    padding: 0;
+}
+.nav{
+    background-color: brown;
+}
+.main{
+    margin-top: 10%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+    
+}
+.main a{
+    width: 25%;
+}
+.main button{
+    width: 100%;
+    height: 35px;
+    margin-bottom: 15px;
+    border-radius: 10px;
+    border: 4px solid brown;
+    background-color: wheat
+}
